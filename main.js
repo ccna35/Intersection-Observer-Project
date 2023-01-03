@@ -1,25 +1,27 @@
-const cards = document.querySelectorAll(".card");
+// Code to handle the intersection observer of the posts
+// const cards = document.querySelectorAll(".card");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("show");
+//       }
+//     });
+//   },
+//   { threshold: 0.5 }
+// );
 
-const callback = (e) => {
-  console.log(e.target);
-};
+// const callback = (e) => {
+//   console.log(e.target);
+// };
 
-cards.forEach((card) => observer.observe(card));
+// cards.forEach((card) => observer.observe(card));
 
-const dropdownBtns = document.querySelectorAll(".dropdown");
+// Code to handle the dropdown menus
+const clickableDropdownBtns = document.querySelectorAll(".clickableDropdown");
 
-dropdownBtns.forEach((btn) => {
+clickableDropdownBtns.forEach((btn) => {
   btn.addEventListener("mouseover", () => {
     btn.querySelector("ul").classList.add("show");
   });
